@@ -1,0 +1,43 @@
+<?php
+   session_start();
+?>
+<html>
+<head> <title> Login </title> </head>
+<body>
+<form action="login.php" method="POST">
+
+<input type="text" name="uid" placeholder="Username" ><br>
+<br>
+<input type="password" name="pwd" placeholder="Password"><br>
+<br>
+<button type="submit">Login</button>
+</form>
+
+<?php
+	if(isset($_SESSION['id'])) {   //if session has been set inside the website
+	echo $_SESSION['id'];
+	}
+	else{
+	echo "You are not logged in!!";
+	}
+?>
+
+<br>
+<br>
+<br>
+
+<form action="signup.php" method="POST">
+<input type="text" name="name" placeholder="Name" ><br>
+<br>
+<input type="text" name="uid" placeholder="Username" ><br>
+<br>
+<input type="password" name="pwd" placeholder="Password"><br>
+<br>
+<button type="submit">Sign Up</button>
+</form action="signup.php">
+<button>Log Out</button>
+<form>
+
+</form>
+</body>
+</html>
